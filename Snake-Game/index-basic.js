@@ -43,12 +43,7 @@ let snake2 = {
     score: 0,
 }
 // Nomer 6
-let snake3 = {
-    color: "green",
-    position: initPosition(),
-    direction: initDirection(),
-    score: 0,
-}
+
 
 // apel 1
 let apple1 = {
@@ -98,7 +93,7 @@ function draw() {
         // menggambar ular (player) 1-3
         drawCell(ctx, snake1.position.x, snake1.position.y, snake1.color);
         drawCell(ctx, snake2.position.x, snake2.position.y, snake2.color);
-        drawCell(ctx, snake3.position.x, snake3.position.y, snake3.color); // Nomer 6
+
 
         // menggambar apel
         ctx.drawImage(appleImg, apple1.position.x * CELL_SIZE, apple1.position.y * CELL_SIZE, CELL_SIZE, CELL_SIZE); // Nomer 3
@@ -207,19 +202,10 @@ document.addEventListener("keydown", function (event) { // input kiri, kanan, at
         snake2.direction = DIRECTION.DOWN;
     }
 
-    // input j,l,i,k (player 3)
-    if (event.key === "j") {
-        snake3.direction = DIRECTION.LEFT;
-    } else if (event.key === "l") {
-        snake3.direction = DIRECTION.RIGHT;
-    } else if (event.key === "i") {
-        snake3.direction = DIRECTION.UP;
-    } else if (event.key === "k") {
-        snake3.direction = DIRECTION.DOWN;
-    }
+    
 })
 
 // fungsi jalan tiap2 ular (player)
 move(snake1);
 move(snake2);
-move(snake3);
+
