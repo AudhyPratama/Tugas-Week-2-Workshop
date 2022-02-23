@@ -207,6 +207,16 @@ document.addEventListener("keydown", function (event) { // input kiri, kanan, at
         snake2.direction = DIRECTION.DOWN;
     }
 
+    // input j,l,i,k (player 3)
+    if (event.key === "j") {
+        snake3.direction = DIRECTION.LEFT;
+    } else if (event.key === "l") {
+        snake3.direction = DIRECTION.RIGHT;
+    } else if (event.key === "i") {
+        snake3.direction = DIRECTION.UP;
+    } else if (event.key === "k") {
+        snake3.direction = DIRECTION.DOWN;
+    }
     
 })
 
