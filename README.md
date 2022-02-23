@@ -7,3 +7,4 @@ Tugas minggu 2 workshop Ruangguru Snake Game menggunakan JS
 - first beta release
 - update hints in sc
 - update new playable snake
+- update new apple
