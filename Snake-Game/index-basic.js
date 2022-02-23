@@ -56,7 +56,11 @@ let apple1 = {
     position: initPosition(),
 }
 
-
+// Nomer 4
+let apple2 = {
+    color: "yellow",
+    position: initPosition(),
+}
 
 // menggambar posisi apel
 function drawCell(ctx, x, y, color) {
@@ -98,7 +102,7 @@ function draw() {
 
         // menggambar apel
         ctx.drawImage(appleImg, apple1.position.x * CELL_SIZE, apple1.position.y * CELL_SIZE, CELL_SIZE, CELL_SIZE); // Nomer 3
-        
+        ctx.drawImage(appleImg, apple2.position.x * CELL_SIZE, apple2.position.y * CELL_SIZE, CELL_SIZE, CELL_SIZE); // Nomer 4
 
         // menggambar skor player 1-3
         drawScore(snake1);
@@ -129,7 +133,10 @@ function eat(snake, apple1, apple2) {
         apple1.position = initPosition();
         snake.score++;
     }
-    
+    if (snake.position.x == apple2.position.x && snake.position.y == apple2.position.y) { // Nomer 4
+        apple2.position = initPosition();
+        snake.score++;
+    }
 }
 
 // fungsi jalan kekiri
